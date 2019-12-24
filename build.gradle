@@ -4,12 +4,16 @@ buildscript {
     repositories {
         google()
         jcenter()
+        maven { url 'https://dl.bintray.com/kotlin/kotlin-eap' }
+        maven { url = "https://kotlin.bintray.com/kotlinx" }
+        maven { url = "https://dl.bintray.com/jetbrains/kotlin-native-dependencies" }
 
     }
     dependencies {
         classpath "com.android.tools.build:gradle:${Versions.androidBuildToolsVersion}"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
         classpath "org.jetbrains.kotlin:kotlin-serialization:${Versions.kotlin}"
+        classpath "org.jetbrains.kotlin:kotlin-frontend-plugin:${Versions.kotlinFrontendPlugin}"
     }
 }
 
@@ -17,6 +21,14 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven { url = "https://dl.bintray.com/kotlin/kotlin-eap" }
+        maven { url = "https://dl.bintray.com/kotlin/squash" }
+        maven { url = "https://dl.bintray.com/kotlin/kotlinx.html" }
+        maven { url = "https://dl.bintray.com/kotlin/ktor" }
+        maven { url = "https://kotlin.bintray.com/kotlinx" }
+        maven { url = "https://kotlin.bintray.com/kotlin-dev" }
+        maven { url = "https://kotlin.bintray.com/kotlin-js-wrappers"}
+
     }
 }
 

@@ -41,9 +41,17 @@ kotlin {
         }
 
         fromPreset(presets.android, 'android')
+        js()
     }
 
-
+    js {
+        compileKotlinJs {
+            kotlinOptions.metaInfo = true
+            kotlinOptions.sourceMap = true
+            kotlinOptions.moduleKind = "commonjs"
+            kotlinOptions.main = "call"
+        }
+    }
 
     cocoapods {
         // Configure fields required by CocoaPods.
@@ -104,5 +112,13 @@ kotlin {
             implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime-native:${Versions.kotlinxSerialization}"
         }
 
+        jsMain.dependencies {
+            api Kotlin.stdlibJs
+            api Kotlin.serializationRuntimeJs
+            api Ktor.clientJs
+            api Ktor.clientJsonJs
+            api Ktor.clientLoggingJs
+            api Ktor.clientSerializationJs
+        }
     }
 }
