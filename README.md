@@ -16,7 +16,8 @@ The following is pretty much all the code used (along with gradle files/resource
 
 ```swift
 struct ContentView: View {
-    @ObservedObject var peopleInSpaceViewModel = PeopleInSpaceViewModel(repository: PeopleInSpaceRepository())
+    @ObservedObject var peopleInSpaceViewModel = 
+        PeopleInSpaceViewModel(repository: PeopleInSpaceRepository())
 
     var body: some View {
         NavigationView {
