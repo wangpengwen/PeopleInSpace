@@ -3,6 +3,7 @@
 Minimal **Kotlin Multiplatform** project using Jetpack Compose and SwiftUI
 
 It shows list of people currently in space!  
+
 The list is shown on Android using **Jetpack Compose** and on iOS using **SwiftUI**
 
 **Note**: You need to use Android Studio v4.0 (currently on Canary 6).  Have tested on Xcode v11.3
